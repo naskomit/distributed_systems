@@ -1,7 +1,5 @@
 package ds.mr
 
-import ds.mr.KeyValue
-
 case class KeyValue[A](key: String, value: A)
 
 trait IMapReduce[A] {

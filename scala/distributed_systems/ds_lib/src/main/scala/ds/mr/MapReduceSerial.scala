@@ -1,7 +1,4 @@
-package ds
-
-import ds.mr.{IMapReduce, KeyValue}
-import ds.mr.apps.WordCount
+package ds.mr
 
 object MapReduceSerial {
   def map_reduce[A](app: IMapReduce[A], inputs: Seq[(String, String)]): Seq[(String, A)] = {

@@ -1,6 +1,7 @@
 
 ThisBuild / organization := "sysmo"
-ThisBuild / scalaVersion := "3.1.2"
+//ThisBuild / scalaVersion := "3.1.2"
+ThisBuild / scalaVersion := "2.13.8"
 ThisBuild / version := "0.1.0-SNAPSHOT"
 
 lazy val root = project
@@ -26,6 +27,8 @@ lazy val ds_lib = project
       "io.monix" %% "monix" % "3.4.0",
       // Class graph
       "io.github.classgraph" % "classgraph" % "4.8.146",
+      // Finagle
+      "com.twitter" %% "finagle-http"  % "22.4.0"
       // Airframe RPC
 //      "org.wvlet.airframe" %% "airframe" % "22.4.2",
 //      "org.wvlet.airframe" %% "airframe-http" % "22.4.2",

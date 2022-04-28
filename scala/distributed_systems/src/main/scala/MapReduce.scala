@@ -1,10 +1,9 @@
-import ds.MapReduceSerial
-import ds.mr.{IMapReduce, KeyValue}
+import ds.mr.{IMapReduce, KeyValue, MapReduceSerial}
 import ds.mr.apps.WordCount
 import io.github.classgraph.ClassGraph
 
-import scala.jdk.CollectionConverters.*
-import scala.util.{Success, Failure, Using}
+import scala.jdk.CollectionConverters._
+import scala.util.{Failure, Success, Using}
 
 object MapReduce {
   def read_file(path: String) = scala.io.Source.fromResource(path).mkString
@@ -19,7 +18,8 @@ object MapReduce {
   }
 
 
-  @main def main(input_folder: String): Unit = {
+  def main(args: Array[String]): Unit = {
+    val input_folder = args(0)
     val input_files = scan_resources(input_folder)
     val file_content = input_files.map(f => (f, read_file(f)))
     val result = MapReduceSerial.map_reduce(WordCount, file_content).sortBy {
