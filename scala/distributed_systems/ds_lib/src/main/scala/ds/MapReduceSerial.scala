@@ -12,5 +12,4 @@ object MapReduceSerial {
     val result = sorted.map(item => (item._1, app.reduce(item._1, item._2)))
     result
   }
-
 }

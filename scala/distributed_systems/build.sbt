@@ -25,6 +25,9 @@ lazy val ds_lib = project
       // Monix
       "io.monix" %% "monix" % "3.4.0",
       // Class graph
-      "io.github.classgraph" % "classgraph" % "4.8.146"
+      "io.github.classgraph" % "classgraph" % "4.8.146",
+      // Airframe RPC
+//      "org.wvlet.airframe" %% "airframe" % "22.4.2",
+//      "org.wvlet.airframe" %% "airframe-http" % "22.4.2",
     )
   )
